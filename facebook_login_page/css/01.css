@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+#outter{
+    background-color: rgba(131, 131, 131, 0.096);
+    height: 710px;
+}
+
+img{
+    width: 300px;
+    height: 106px;
+    margin: -25px;
+    padding-left: 25px;
+}
+.main{
+    float: left;
+    width: 500px;
+    height: 84px;
+
+    padding-top: 60px;
+}
+#main_text{
+    width: 500px;
+    height: 84px;
+    font-size: 28px;
+    padding-left: 32px;
+}
+.login{
+    float: right;
+    
+
+    width: 396px;
+    height: 356px;
+
+    border: 0px;
+    text-align: center;
+
+    box-shadow: 1px 1px 7px -3px gray;
+    border-radius: 8px 8px 8px 8px;
+    background-color: white;
+}
+.login>a{
+    font-size: 12px;   
+}
+.login>hr{
+    margin: 20px;
+}
+#ot{
+    clear: both;
+    float: right;
+
+    padding-top: 28px;
+    padding-right: 30px;
+    font-size: 14px;
+}
+
+.input_text{
+    width:350px; height:51px;
+    margin-top: 15px;
+    border-radius: 7px 7px 7px 7px;
+    border: 1px solid rgba(182, 182, 182, 0.445);
+
+    box-shadow: 1px 1px 1px -2px gray;
+
+    padding-left: 10px;
+}
+#btn{
+    width:350px; height:51px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 7px 7px 7px 7px;
+    border: 0px solid;
+
+    background-color: rgba(71, 105, 240, 0.936);
+    color: white;
+
+    font-weight: bold;
+    font-size: 20px;
+}
+#add_btn{
+    width: 130px;
+    height: 51px;
+
+    background-color: rgb(43, 167, 43);
+    border-radius: 7px 7px 7px 7px;
+    border: 0px;
+    
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+.inner{
+    width: 980px;
+    height: 535px;
+    padding-top: 130px;
+    margin: 0 auto;
+}
+#bottom{
+    width: 970px;
+    margin: 0 auto;
+    padding-top: 20px;
+
+    font-size: 12px;
+    color: gray;
+}
+li{
+    list-style-type: none;
+    display: inline-block;
+}
+#len>li{
+    padding-left: 10px;
+}
+#len{
+    padding-left: 2px;
+}
+#foot>li{
+    margin: 1px;
+    padding-left: 13px;
+}
+#bottom>hr{
+    margin: 9px;
+    margin-left: 13px;
+}
+
+#end{
+  padding-left: 15px;
+  padding-top: 20px;  
+  
+}
