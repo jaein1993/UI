@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: KH정보교육원 RAD 로그인 ::</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    html {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contents {
+        text-align: center;
+        margin-top: 12%;
+        height: 1000px;
+    }
+
+    .login_content>input {
+        width: 350px;
+        height: 43px;
+        border: 0px;
+        border-bottom: 1px solid #f3f5f7;
+        color: #7a7a7a;
+
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .login_content>input:focus{
+        outline: none;
+    }
+    input:focus::placeholder{
+        color:transparent;
+        transition: all 0.4s;
+    }
+
+    .login_content>input[type="text"] {
+        background-image: url(img/login_id_m2.png);
+        background-repeat: no-repeat;
+        background-size: 17px 19px;
+        background-position: 6% 50%;
+
+        box-sizing: border-box;
+        text-align: center;
+
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+
+    .login_content>input[type="password"] {
+        background-image: url(img/login_pw_m3.png);
+        background-repeat: no-repeat;
+        background-size: 17px 19px;
+        background-position: 6% 50% ;
+
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+    #login{
+        color: white;
+        margin-top: 50px;
+        border-radius: 20px 20px 20px 20px;
+        border: 0;
+        width: 100%;
+        max-width: 300px;
+        line-height: 39px;
+        padding: 0;
+        background: #3b84ff;
+        box-shadow: 0 4px 10px 0px rgb(59 132 255 / 40%);
+        font-weight: 300;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    #sign_up{
+        margin-top: 13px;
+        color: white;
+        border-radius: 20px 20px 20px 20px;
+        border: 0;
+        width: 100%;
+        max-width: 300px;
+        line-height: 39px;
+        padding: 0;
+        background: #312459;
+        box-shadow: 0 4px 10px 0px rgb(59 132 255 / 40%);
+        font-weight: 300;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    li{
+        display: inline-block;
+        list-style-type: none;
+        cursor: pointer;
+        font-size: 13px;
+        margin-top: 28px;
+    }
+    .login_checked{
+       
+        font-size: 14px;
+        color: #3e3e3e;
+        
+        margin-top: 19px;
+    }
+    .login_checked>label{
+        cursor: pointer;
+    }
+
+    .footer{
+        width: 100%;
+        
+        text-align: center;
+        font-size: 11px;
+        
+        position: fixed;
+        bottom: 44px;
+
+        border-top:1px solid #e4e6eb ;
+        color: #999999;
+        padding-top: 33px;
+    }
+
+</style>
+
+<body>
+
+    <div class="contents">
+        <div class="main_logo">
+            <img src="img/login_logo1.png">
+
+        </div>
+
+        <div class="login_content">
+            <input type="text" placeholder="id" autofocus><br>
+            <input type="password" placeholder="password">
+        </div>
+
+        <div class="btn">
+            
+            <button id="login">KH RAD LOGIN</button><br>
+            <button id="sign_up">SIGN UP</button>
+            
+            <!-- 로그인 클릭 이벤트 발생시 -->
+            <script>
+                document.getElementById("login").addEventListener('click', time)
+                cnt = 0;
+                
+                function time(){
+                    const now = new Date;
+                    
+                    if(cnt >= 5){
+                        console.error("ERROR");
+                        alert("ERROR!!")                        
+                    } else{
+                        cnt++
+                        alert(`개인정보가 일치하지 않습니다.비밀번호 입력 6회이상 불일치 할 경우계정 로그인이 10분간 제한됩니다. \n로그인 시도 가능 횟수 ${cnt}/5 \n최근 로그인 접속 시도시간 : ${now.toLocaleString("ko")}`)
+                        
+                    }
+                }   
+            </script>
+
+            <!-- 회원가입 클릭 이벤트 발생시 -->
+            <script>
+                document.getElementById("sign_up").addEventListener('click', signUp);
+
+                function signUp(){
+                    alert("[알림] RAD에 로그인 되어 있는 경우, 회원가입 진행을 위해 로그아웃\n합니다.");
+                    location.href="https://khmain.or.kr/login/accountBasicInfo.kh"
+                }       
+            </script>
+
+        </div>
+
+        <ul>
+            <li>아이디찾기</li>
+            <li>|</li>
+            <li>비밀번호찾기</li>
+        </ul>
+
+        <div class="login_checked">
+            <label for="check">KH RAD의 정보를 외부에 유출하지 않겠습니다.</label>
+            <input type="checkbox" id="check">
+        </div>
+    </div>
+
+    <div class="footer">
+        
+        <p>Copyright © 1998-2022 KH Information Educational Institute All Right Reserved</p>
+
+    </div>
+</body>
+
+</html>
